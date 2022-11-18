@@ -1,0 +1,17 @@
+Win32_Desktop
+Win32_ComputerSystem
+Win32_LogonSession
+Win32_Group
+Win32_SID
+Win32_NTLogEvent
+Win32_ScheduledJob
+Win32_TimeZone
+Win32_Perf*
+Win32_PerfFormattedData_PerfDisk_LogicalDisk
+Win32_PerfFormattedData_PerfDisk_PhysicalDisk
+Win32_PerfFormattedData_PerfOS_PagingFile
+Win32_PerfFormattedData_PerfOS_Processor
+Win32_PerfFormattedData_PerfOS_Memory
+Win32_WinSat
+Win32_ReliabilityStabilityMetrics
+Win32_NetworkAdapterConfiguration

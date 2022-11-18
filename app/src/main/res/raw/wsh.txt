@@ -1,0 +1,180 @@
+WScript-This is the WSH root object. It provides access to a number of
+useful properties and methods. It also provides access to the rest of
+the objects in the WSH core object model.
+Properties: Arguments, FullName, Interactive, Name,
+Path, ScriptFullName, ScriptName, StdErr, StdIn,
+StdOut, and Version
+Methods: ConnectObject(), CreateObject(),
+DisconnectObject(), Echo(), GetObject(), Quit(),
+and Sleep();
+WshArguments- This object allows you to access commandline arguments passed
+to the script at execution time.
+Properties: Count, Item, and Length;
+WshNamed- This object provides access to a set of named command-line
+arguments.
+Properties: Item and Length
+Methods: Count() and Exists();
+WshUnnamed- This object provides access to a set of unnamed command-line
+arguments.
+Properties: Item and Length
+Methods: Count();
+WshController-This object provides the ability to create a remote script process.
+Properties: This object does not support any properties.
+Methods: CreateScript;
+WshRemote-This object provides the ability to administrate remote computer
+systems using scripts over a network.
+Properties: Status and Error
+Methods: Execute() and Terminate();
+
+WshRemoteError-This object provides access to information on errors produced by
+remote scripts.
+Properties: Description, Line, Character, SourceText,
+Source, and Number
+Methods: This object does not support any methods.;
+WshNetwork-This object provides access to a number of different network
+resources such as network printers and drives.
+Properties: ComputerName, UserDomain, and UserName
+Methods: AddWindowsPrinterConnection(),
+AddPrinterConnection(), EnumNetworkDrives(),
+EnumPrinterConnection(), MapNetworkDrive(),
+RemoveNetworkDrive(),
+RemovePrinterConnection(), and
+SetDefaultPrinter();
+WshShell-This object provides access to the Windows registry, event log,
+environmental variables, shortcuts, and applications.
+Properties: CurrentDirectory, Environment, and
+SpecialFolders
+Methods: AppActivate(), CreateShortcut(),
+ExpandEnvironmentStrings(), LogEvent(), Popup(),
+RegDelete(), RegRead(), RegWrite(), Run(),
+SendKeys(), and Exec();
+WshShortcut-This object provides scripts with methods and properties for creating and manipulating Windows shortcuts.
+Properties: Arguments, Description, FullName, Hotkey,
+IconLocation, TargetPath, WindowStyle, and
+WorkingDirectory
+Method: Save();
+WshUrlShortcut-This object provides scripts with methods and properties for creating and manipulating URL shortcuts.
+Properties: FullName and TargetPath
+Methods: Save();
+
+WshEnvironment-This object provides access to Windows environmental variables.
+Properties: Item and Length
+Methods: Remove() and Count();
+WshSpecialFolders-This object provides access to special Windows folders that allow
+scripts to configure the Start menu, desktop, Quick Launch toolbar, and other special Windows folders.
+Properties: Item
+Methods: Count();
+WshScriptExec-This object provides access to error information from scripts run
+using the Exec method.
+Properties: Status, StdOut, StdIn, and StdErr
+Methods: Terminate();
+
+
+Arguments-Sets a pointer reference to the WshArguments collection;
+AtEndOfLine- Returns either True or False depending on whether the end-ofline maker has been reached in the stream;
+AtEndOfStream- Returns either True or False depending on whether the end of
+the input stream has been reached;
+Character- Identifies the specific character in a line of code where an error occurs;
+Column- Returns the current column position in the input stream;
+ComputerName- Retrieves a computer’s name;
+CurrentDirectory- Sets or retrieves a script’s current working directory;
+Description- Retrieves the description for a specified shortcut;
+Environment- Sets a pointer reference to the WshEnvironment;
+Error- Provides the ability to expose a WshRemoteError object;
+ExitCode- Returns the exit code from a script started using Exec();
+FullName- Retrieves a shortcut or executable program’s path;
+HotKey- Retrieves the hotkey associated with the specified shortcut;
+IconLocation- Retrieves an icon’s location;
+Interactive- Provides the ability to programmatically set script mode;
+Item- Retrieves the specified item from a collection or provides access to
+items stored in the WshNamed object;
+Length- Retrieves a count of enumerated items;
+Line- Returns the line number for the current line in the input stream or
+identifies the line number within a script where an error occurred;
+Name- Returns a string representing the name of the WScript object;
+Number- Provides access to an error number;
+Path- Returns the location of the folder where the CScript or
+WScript execution hosts reside;
+ProcessID- Retrieves the PID (process ID) for a process started using the
+WshScriptExec object
+ScriptFullName- Returns an executing script’s path;
+
+ScriptName- Returns the name of the executing script;
+Source- Retrieves the identity of the object that caused a script error;
+SourceText- Retrieves the source code that created the error;
+SpecialFolders- Provides access to the Windows Start menu and desktop folders;
+Status- Provides status information about a remotely executing script or a
+script started with Exec();
+StdErr- Enables a script to write to the error output stream or provides
+access to read-only error output from an Exec ;
+StdIn- Enables read access to the input stream or provides access to the
+&write-only input scream for the Exec object;
+StdOut- Enables write access to the output stream or provides access to the
+write only output stream of the Exec object;
+TargetPath- Retrieves a shortcut’s path to its associated object;
+UserDomain- Retrieves the domain name;
+UserName- Retrieves the currently logged on user’s name;
+Version- Retrieves the WSH version number;
+WindowStyle- Retrieves a shortcut’s window style;
+WorkingDirectory- Returns the working directory associated with the specified shortcut;
+
+AddPrinterConnection()- Creates printer mappings;
+AddWindowsPrinterConnection()- Creates a new printer connection;
+AppActivate()- Activates the targeted application Window;
+Close()- Terminates or ends an open data stream;
+ConnectObject()- Establishes a connection to an object;
+Count- Retrieves the number of switches found in the
+WshNamed and WshUnnamed objects;
+CreateObject()- Creates a new instance of an object;
+CreateScript()- Instantiates a WshRemote object representing a
+script that is running remotely;
+CreateShortcut()- Creates a Windows shortcut;
+DisconnectObject()- Terminates a connection with an object;
+Echo()- Displays a text message;
+EnumNetworkDrives()- Enables access to network drives;
+EnumPrinterConnections()- Enables access to network printers;
+Exec()- Executes an application in a child command shell
+and provides access to the environment variables;
+Execute()- Initiates the execution of a remote script object;
+Exists()- Determines a specified key exists within the
+WshNamed object;
+ExpandEnvironmentStrings()- Retrieves a string representing the contents of the
+Process environmental variable;
+GetObject()- Retrieves an Automation object;
+GetResource()- Retrieves a resource’s value as specified by the
+<resource> tag;
+LogEvent()- Writes a message in the Windows event log;
+MapNetworkDrive()- Creates a network drive mapping;
+Popup()- Displays a text message in a pop-up dialog box;
+Quit()- Terminates or ends a script;
+
+
+Read()- Retrieves a string of characters from the input
+stream;
+ReadAll()- Retrieves the s string that is made up of the characters in the input stream;
+ReadLine()- Retrieves a string containing an entire line of data
+from the input stream;
+RegDelete()- Deletes a registry key or value;
+RegRead()- Retrieves a registry key or value;
+RegWrite()- Creates a registry key or value;
+Remove() - Deletes the specified environmental variable;
+RemoveNetworkDrive()- Deletes the connection to the specified network
+drive;
+RemovePrinterConnection()- Deletes the connection to the specified network
+printer;
+Run()- Starts a new process;
+Save()- Saves a shortcut;
+SendKeys()- Emulates keystrokes and sends typed data to a
+specified Window;
+SetDefaultPrinter()- Establishes a default Windows printer;
+ShowUsage()- Retrieves information regarding the way that a
+script is supposed to be executed;
+Skip()- Skips x number of characters when reading from
+the input stream;
+SkipLine()- Skips an entire line when reading from the input
+stream;
+Sleep()- Pauses script execution for x number of ;
+Terminate()- Stops a process started by Exec();
+Write()- Places a string in the output stream;
+WriteBlankLines()- Places a blank in the output stream;
+WriteLine() - Places a string in the output stream;
